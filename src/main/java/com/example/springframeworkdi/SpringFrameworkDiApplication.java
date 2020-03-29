@@ -1,9 +1,14 @@
 package com.example.springframeworkdi;
 
+import com.example.springframeworkdi.controllers.ConstructorInjectedController;
 import com.example.springframeworkdi.controllers.MyController;
+import com.example.springframeworkdi.controllers.PropertyInjectedController;
+import com.example.springframeworkdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import java.util.Set;
 
 @SpringBootApplication
 public class SpringFrameworkDiApplication {
@@ -14,6 +19,24 @@ public class SpringFrameworkDiApplication {
 		MyController myController = (MyController)ctx.getBean("myController");
 
 		System.out.println(myController.sayHello());
+
+		System.out.println("=================Property==============");
+
+		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
+
+		System.out.println(propertyInjectedController.sayGreeting());
+
+		System.out.println("=================Setter==============");
+
+		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+
+		System.out.println(setterInjectedController.sayGreeting());
+
+		System.out.println("=================Constructor==============");
+
+		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
+
+		System.out.println(constructorInjectedController.sayGreeting());
 	}
 
 }

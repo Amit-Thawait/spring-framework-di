@@ -1,9 +1,6 @@
 package com.example.springframeworkdi;
 
-import com.example.springframeworkdi.controllers.ConstructorInjectedController;
-import com.example.springframeworkdi.controllers.MyController;
-import com.example.springframeworkdi.controllers.PropertyInjectedController;
-import com.example.springframeworkdi.controllers.SetterInjectedController;
+import com.example.springframeworkdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -37,6 +34,12 @@ public class SpringFrameworkDiApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 
 		System.out.println(constructorInjectedController.sayGreeting());
+
+		System.out.println("=================Primary==============");
+
+		PrimaryController primaryController = (PrimaryController) ctx.getBean("primaryController");
+
+		System.out.println(primaryController.sayGreeting());
 	}
 
 }

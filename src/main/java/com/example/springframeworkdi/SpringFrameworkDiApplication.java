@@ -40,6 +40,12 @@ public class SpringFrameworkDiApplication {
 		PrimaryController primaryController = (PrimaryController) ctx.getBean("primaryController");
 
 		System.out.println(primaryController.sayGreeting());
+
+		System.out.println("=================Profiles==============");
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+
+		System.out.println(i18nController.sayHello());
 	}
 
 }

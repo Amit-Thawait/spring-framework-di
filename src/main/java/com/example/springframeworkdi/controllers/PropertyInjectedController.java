@@ -1,6 +1,6 @@
 package com.example.springframeworkdi.controllers;
 
-import com.example.springframeworkdi.services.GreetingService;
+import com.example.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

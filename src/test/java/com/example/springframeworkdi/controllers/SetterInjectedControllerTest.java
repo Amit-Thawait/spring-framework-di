@@ -1,6 +1,6 @@
 package com.example.springframeworkdi.controllers;
 
-import com.example.services.ConstructorGreetingService;
+import com.example.springframeworkdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
